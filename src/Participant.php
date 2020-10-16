@@ -24,8 +24,6 @@ class Participant {
     private $prenom;
     private $nom;
     private $age;
-    private $categorie;
-    private $profil;
 
 
     /**
@@ -88,51 +86,6 @@ class Participant {
         $this->age = $age;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCategorie()
-    {
-        return $this->categorie;
-    }
 
-    /**
-     * @param mixed $categorie
-     */
-    public function setCategorie($categorie)
-    {
-        if($categorie === "M1" || $categorie === "M2" || $categorie === "M3" || $categorie === "Senior" || $categorie === "V" || $categorie === "Snow" || $categorie === "NG")
-        {
-            $this->categorie = $categorie;
-        }
-        else{
-            throw new \InvalidArgumentException('categorie incorrect');
-        }
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProfil()
-    {
-        return $this->profil;
-    }
-
-    /**
-     * @param mixed $profil
-     */
-    public function setProfil($profil)
-    {
-        if($profil === "ASVP" || $profil === "OPEN" || $profil === "Grades")
-        {
-            $this->profil = $profil;
-        }
-        else{
-            throw new \InvalidArgumentException('categorie incorrect');
-        }
-
-
-
-    }
 
 }
