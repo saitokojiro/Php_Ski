@@ -20,29 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8152076-4834-4158-b41d-8e8afbb24bfd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Epreuve.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Epreuve.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Participant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Participant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.puml" beforeDir="false" afterPath="$PROJECT_DIR$/test.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/EpreuveTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/EpreuveTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ParticipantTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ParticipantTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ParticipantsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ParticipantsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ResultatTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ResultatTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/HelloController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/HelloController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +146,7 @@
       <updated>1602594393383</updated>
       <workItem from="1602594394555" duration="54000" />
       <workItem from="1602594457079" duration="14316000" />
-      <workItem from="1602744978413" duration="36267000" />
+      <workItem from="1602744978413" duration="36650000" />
     </task>
     <servers />
   </component>
