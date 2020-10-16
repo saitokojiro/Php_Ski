@@ -12,7 +12,7 @@ class HelloController
     public function helloTest()
     {
         $twig = new TwigConfig();
-        echo $twig->twig->render('hello.html.twig',[]);
+        echo $twig->twig->render('hello.html.twig',["hello" => true]);
     }
 
     public function ErrorTest()
