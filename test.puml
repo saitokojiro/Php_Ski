@@ -40,11 +40,16 @@ Class Participants{
     +selectionDesParticipant()
     +deselectionDesParticipant()
 }
-
+Class Passage{
+    -id: Int
+    -participant: String
+    -nb: Int
+    -temps: Object Int 
+}
 
 Participants *-- Participant
-Epreuves *-- Participants
-Epreuves -- Resultat
-Resultat <|-- Participant
+Resultat *-- Participants
+Epreuves -- Passage
+Passage <|-- Participant
 
 @enduml

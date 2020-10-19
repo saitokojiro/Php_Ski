@@ -19,35 +19,23 @@ class EpreuveTest extends TestCase
 
     }
 
-    public function testvalidCategorie()
+    public function testValidDate()
     {
-        $cat = new Epreuve();
-        $cat->setCategorie("M1");
-        $this->assertSame("M1",$cat->getCategorie());
-    }
+        $dateEndInsc =  new Epreuve();
+        $dateEndInsc->setDate(date("d-m-Y", strtotime("10-05-2021")));
 
-    public function testinvalidCategorie()
-    {
-        $this->expectException(\InvalidArgumentException::class);
-        $cat = new Epreuve();
-        $cat->setCategorie("M1s");
+        $this->assertSame(date("d-m-Y", strtotime("10-05-2021")), $dateEndInsc->getDate());
+
 
     }
 
-    public function testvalidProfil()
-    {
-        $prof = new Epreuve();
-        $prof->setProfil("ASVP");
-        $this->assertSame("ASVP",$prof->getProfil());
-    }
-    public function testinvalideProfil()
+    public function testInvalidDate()
     {
         $this->expectException(\InvalidArgumentException::class);
-        $prof =  new Epreuve();
-        $prof->setProfil("ASVPs");
+        $dateEndInsc = new Epreuve();
+        $dateEndInsc->setDate(date("d-m-Y", strtotime("10-05-2020")));
 
     }
-
 
 
 }

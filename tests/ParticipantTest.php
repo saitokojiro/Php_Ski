@@ -15,38 +15,11 @@ class ParticipantTest extends TestCase
     {
         $this->expectException(\InvalidArgumentException::class);
         $name = new Participant();
-        $name->setNom("test51s");
+        $name->setNom("test551s");
 
     }
 
-    public function testvalidCategorie()
-    {
-        $cat = new Participant();
-        $cat->setCategorie("M1");
-        $this->assertSame("M1",$cat->getCategorie());
-    }
 
-    public function testinvalidCategorie()
-    {
-        $this->expectException(\InvalidArgumentException::class);
-        $cat = new Participant();
-        $cat->setCategorie("M1s");
-
-    }
-
-    public function testvalidProfil()
-    {
-        $prof = new Participant();
-        $prof->setProfil("ASVP");
-        $this->assertSame("ASVP",$prof->getProfil());
-    }
-    public function testinvalideProfil()
-    {
-        $this->expectException(\InvalidArgumentException::class);
-        $prof =  new Participant();
-        $prof->setProfil("ASVPs");
-
-    }
 
 
 
