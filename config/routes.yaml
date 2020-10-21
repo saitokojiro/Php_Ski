@@ -1,3 +1,7 @@
-foo:
-  path:     /home
-  defaults: { controller: 'App\controller\HelloController::helloTest' }
+index:
+  path: /
+  defaults: { controller: 'App\controller\IndexController::index' }
+participant:
+  path: /participant
+  defaults:
+    { controller: 'App\controller\ParticipantController::participantView' }
