@@ -1,6 +1,6 @@
 <?php
 
-use App\Passage;
+use App\entity\Passage;
 use PHPUnit\Framework\TestCase;
 
 class PassageTest extends TestCase

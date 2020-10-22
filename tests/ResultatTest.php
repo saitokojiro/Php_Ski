@@ -1,8 +1,8 @@
 <?php
-use App\Resultat;
+use App\entity\Resultat;
 use PHPUnit\Framework\TestCase;
 
-class ResultatTestTest extends TestCase
+class ResultatTest extends TestCase
 {
     public function test()
     {

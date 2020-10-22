@@ -1,5 +1,5 @@
 <?php
-use App\Participant;
+use App\entity\Participant;
 use PHPUnit\Framework\TestCase;
 
 class ParticipantTest extends TestCase

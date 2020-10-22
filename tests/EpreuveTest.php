@@ -1,5 +1,5 @@
 <?php
-use App\Epreuve;
+use App\entity\Epreuve;
 use PHPUnit\Framework\TestCase;
 
 class EpreuveTest extends TestCase
