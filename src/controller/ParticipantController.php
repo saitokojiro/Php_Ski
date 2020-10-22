@@ -1,6 +1,8 @@
 <?php
 namespace App\controller;
 
+use App\model;
+
 class ParticipantController
 {
 
