@@ -24,7 +24,7 @@ class ParticipantController
 
         $twig = new \TwigConfig();
         var_dump($this->pList->findAll());
-        echo $twig->twig->render('participantList.html.twig', ['datas' => "$hello->findAll()"]);
+        echo $twig->twig->render('participantList.html.twig', ['pList' => "$hello->findAll()"]);
     }
 
 }
