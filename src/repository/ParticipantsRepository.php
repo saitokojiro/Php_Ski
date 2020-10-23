@@ -3,30 +3,59 @@
 namespace App\repository;
 
 use App\model;
+use mysql_xdevapi\Result;
+use PDO;
 use Pimple\Container;
 
-class ParticipantsRepository
+class ParticipantsRepository extends model\DatabaseModel
 {
-    function __construct($dsn)
+    public static $pdo;
+    public function __construct()
     {
+        self::$pdo = parent::getPdo();
+    }
+
+    public static function find(int $id)
+    {
+
+        $stmt= self::$pdo->prepare('SELECT * FROM participants WHERE id = ?');
+        $stmt->execute(array($id));
+
+        return $stmt->fetch();
+
+/*
+        if(preg_match("/^[0-9]+$/", $id)){
+
+            $conv = intval($id);
+            //$db = new DatabaseModel();
+           // $conv = intval($id);
+            $query = "SELECT * FROM participants WHERE id='$conv';";
+            $stmt= self::$pdo->prepare($query)->execute();
+
+            $result = $stmt->fetchAll();
+            return $result;
+        }
+*/
+
+        /*
+          $conv = intval($id);
+            //$db = new DatabaseModel();
+           // $conv = intval($id);
+            $query = 'SELECT * FROM participants WHERE id = ?';
+
+            $stmt= self::$pdo->prepare($query);
+            $req = $stmt->execute(array($id));
+            $result = $req->fetch();
+            return $result;
+         */
 
     }
 
-    public function find(int $id)
+    public static function findAll()
     {
-        $db = new DatabaseModel();
-        $query = "SELECT * FROM participants WHERE participant_id='$id';";
-        $stmt= $db->dbConnexion()->query($query);
-
-        //return var_dump($stmt->fetch());
-
-    }
-
-    public function findAll()
-    {
-        $db = new DatabaseModel();
+        //$db = new DatabaseModel();
         $query = "SELECT * FROM participants";
-        $stmt= $db->dbConnexion()->query($query);
+        $stmt= self::$pdo->query($query);
         $result = $stmt->fetchAll();
        // return var_dump($result[1]);
         return $result;

@@ -1,7 +1,15 @@
 index:
   path: /
   defaults: { controller: 'App\controller\IndexController::index' }
+participants:
+  path: /participants
+  defaults:
+    { controller: 'App\controller\ParticipantController::participantsView' }
 participant:
-  path: /participant
+  path: /participant/id={id}
   defaults:
     { controller: 'App\controller\ParticipantController::participantView' }
+participantAdd:
+  path: /participant/new
+  defaults:
+    { controller: 'App\controller\ParticipantController::participantAdd' }

@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Generator\UrlGenerator;
 use Symfony\Component\Routing\Loader\YamlFileLoader;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
-
+/*
 use Pimple\Container;
 
 $container = new Container();
@@ -17,7 +17,7 @@ $container['pdo'] = function($c){
     return new PDO($c['db_dsn']) ;
  };
 $container['db_dsn'] = "'mysql:host=localhost;dbname=compets_management; charset=utf8', 'root', ''";
-
+*/
 
 
 
@@ -47,6 +47,7 @@ try
     $response = new Response();
 
 
+
     if ($params[0] !== null) {
 
         $controller = $params[0];
@@ -73,7 +74,24 @@ try
 } catch (ResourceNotFoundException $e) {
     echo $e->getMessage();
 }
+/*
+$uidname = uniqid();
+header('Content-Type: text/csv');
+header('Content-Disposition: attachment; filename= "'.$uidname.'.csv"');
 
+$list = array (
+    array("Peter", "Griffin" ,"Oslo", "Norway"),
+    array("Glenn", "Quagmire", "Oslo", "Norway")
+);
+$fp = fopen('php://output', 'wb');
+foreach ($list as $line) {
+    // though CSV stands for "comma separated value"
+    // in many countries (including France) separator is ";"
+    fputcsv($fp, $line, ',');
+}
+fclose($fp);
+*/
 
+//fclose($fp);
 // container
 

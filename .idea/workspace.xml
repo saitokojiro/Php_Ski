@@ -20,8 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8152076-4834-4158-b41d-8e8afbb24bfd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Php_Ski.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Php_Ski.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/compet.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/compet.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ParticipantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ParticipantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DBtable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DBtable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DatabaseModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DatabaseModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/ParticipantsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/ParticipantsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/participantList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/participantList.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/template.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/template.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,71 +57,70 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/yosymfony/resource-watcher" />
-      <path value="$PROJECT_DIR$/vendor/jolicode/jolinotif" />
-      <path value="$PROJECT_DIR$/vendor/evenement/evenement" />
-      <path value="$PROJECT_DIR$/vendor/react/event-loop" />
-      <path value="$PROJECT_DIR$/vendor/react/stream" />
-      <path value="$PROJECT_DIR$/vendor/clue/utf8-react" />
-      <path value="$PROJECT_DIR$/vendor/clue/term-react" />
-      <path value="$PROJECT_DIR$/vendor/clue/stdio-react" />
-      <path value="$PROJECT_DIR$/vendor/spatie/phpunit-watcher" />
-      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
-      <path value="$PROJECT_DIR$/vendor/twig/twig" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
-      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
       <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
-      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/react/event-loop" />
+      <path value="$PROJECT_DIR$/vendor/react/stream" />
+      <path value="$PROJECT_DIR$/vendor/clue/stdio-react" />
+      <path value="$PROJECT_DIR$/vendor/clue/term-react" />
+      <path value="$PROJECT_DIR$/vendor/clue/utf8-react" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/evenement/evenement" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/yosymfony/resource-watcher" />
+      <path value="$PROJECT_DIR$/vendor/spatie/phpunit-watcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/jolicode/jolinotif" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ipAvnkTDBJ5pRMQtDthpCQRMzY" />
@@ -127,11 +141,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\joel\php\Php_Ski\public\image" />
       <recent name="C:\wamp64\www\joel\php\Php_Ski\src\repository" />
       <recent name="C:\wamp64\www\joel\php\Php_Ski\src\entity" />
       <recent name="C:\wamp64\www\joel\php\Php_Ski" />
       <recent name="C:\wamp64\www\joel\php\Php_Ski\vendor\bin" />
-      <recent name="C:\wamp64\www\joel\php\Php_Ski\config" />
     </key>
   </component>
   <component name="RunManager">
@@ -153,7 +167,7 @@
       <workItem from="1602744978413" duration="38083000" />
       <workItem from="1603349607951" duration="148000" />
       <workItem from="1603350145065" duration="66000" />
-      <workItem from="1603350213398" duration="14888000" />
+      <workItem from="1603350213398" duration="40324000" />
     </task>
     <servers />
   </component>
@@ -180,6 +194,10 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1878" y="126" key="#CLI_Interpreters/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602752022912" />
+    <state x="2056" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603438499888">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2056" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603438499888" />
     <state x="535" y="151" key="FileChooserDialogImpl" timestamp="1603350209608">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -246,9 +264,10 @@
     </state>
     <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1602860171472" />
     <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602751301275" />
-    <state x="2129" y="243" key="NewPhpClassDialog" timestamp="1602745189099">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state x="543" y="170" key="NewPhpClassDialog" timestamp="1603459290360">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="543" y="170" key="NewPhpClassDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603459290360" />
     <state x="2129" y="243" key="NewPhpClassDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602745189099" />
     <state x="565" y="310" key="NewPhpFileDialog" timestamp="1602853261646">
       <screen x="0" y="0" width="1366" height="728" />
@@ -265,16 +284,20 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602768084909" />
-    <state x="2199" y="28" width="1065" height="566" maximized="true" key="dock-window-1" timestamp="1603369995292">
+    <state x="1738" y="155" width="1065" height="538" key="dock-window-1" timestamp="1603464840805">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1892" y="0" width="1065" height="566" maximized="true" key="dock-window-1/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603368823961" />
-    <state x="2199" y="28" width="1065" height="566" maximized="true" key="dock-window-1/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603369995292" />
+    <state x="1738" y="155" width="1065" height="538" key="dock-window-1/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603464840805" />
+    <state x="2024" y="163" width="1065" height="538" key="dock-window-1/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603453845928" />
     <state x="-1687" y="28" width="1336" height="1017" key="dock-window-1/0.0.1920.1040/-1680.28.1680.1010@0.0.1920.1040" timestamp="1602680925286" />
     <state x="2213" y="326" width="1089" height="541" maximized="true" key="dock-window-2" timestamp="1602847818333">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="2213" y="326" width="1089" height="541" maximized="true" key="dock-window-2/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1602847818333" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1603436643763">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603436643763" />
     <state x="1989" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603359926795">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
