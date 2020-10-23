@@ -10,6 +10,11 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 class CsvController
 {
 
+    function __construct()
+    {
+        
+
+    }
 
 
     /**
@@ -38,20 +43,22 @@ echo "";
 /*
             fputcsv(
                 $fp, // The file pointer
-                $listvide // The fields
+                $line // The fields
                  // The delimiter
-            );*/
-
+            );
+*/
         }
 
 // $responseString contains csv result string
-        $content = implode("\n", $listvide);
-
+        $content = implode(" ", $listvide);
+       // die($content);
         $response = new Response($content);
-              $response->headers->set('Content-type', 'text/csv');
-              $response->headers->set('Content-Disposition', 'attachment; filename="ok.csv";');
-            // $response->sendHeaders();
-             // $response->setContent($content);
+             // $response->headers->set('Content-type', 'text/csv');
+             // $response->headers->set('Content-Disposition', 'attachment; filename="ok.csv";');
+             //$response->sendHeaders();
+             //$response->setContent();
+             var_dump('ok');
+        die($response);
         //fclose($fp);
 
         return $response;

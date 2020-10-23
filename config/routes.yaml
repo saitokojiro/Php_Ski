@@ -13,3 +13,7 @@ participantAdd:
   path: /participant/new
   defaults:
     { controller: 'App\controller\ParticipantController::participantAdd' }
+participantCSV:
+  path: /participant/csv
+  defaults:
+    { controller: 'App\controller\CsvController::csvAction'}
