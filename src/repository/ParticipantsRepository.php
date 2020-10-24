@@ -55,9 +55,11 @@ class ParticipantsRepository extends model\DatabaseModel
     {
         //$db = new DatabaseModel();
         $query = "SELECT * FROM participants";
-        $stmt= self::$pdo->query($query);
-        $result = $stmt->fetchAll();
+        $stmt= self::$pdo->prepare($query);
+        $stmt->execute();
+
        // return var_dump($result[1]);
-        return $result;
+        //var_dump($stmt->fetchAll(PDO::FETCH_ASSOC));
+        return  $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

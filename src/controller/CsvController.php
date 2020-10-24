@@ -9,12 +9,14 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class CsvController
 {
+    /*
+    public $pdostmt;
 
     function __construct()
     {
-        
+        $this->pdostmt = new ParticipantsRepository();
 
-    }
+    }*/
 
 
     /**
@@ -24,42 +26,22 @@ class CsvController
      */
     public function csvAction()
     {
-
-echo "";
-        $list = array(
-            //these are the columns
-            array('Firstname', 'Lastname',),
-            //these are the rows
-            array('Andrei', 'Boar'),
-            array('John', 'Doe'));
-
-        $listvide = array();
-
-        //$fp = fopen('php://output','w', "w");
-
-        foreach ($list as $line)
+        $bdd = new ParticipantsRepository();
+        $fp = fopen('php://output','w', "w");
+        $templateCsv = array('id', 'nom','prenom','photo','categorie', 'profil','email','date de naissance');
+        fputcsv($fp, $templateCsv );
+        foreach ($bdd->findAll() as $line)
         {
-            $listvide[] = implode(',', $line);
-/*
-            fputcsv(
-                $fp, // The file pointer
-                $line // The fields
-                 // The delimiter
-            );
-*/
+            fputcsv($fp, $line);
         }
+        $response = new Response(stream_get_contents($fp));
 
-// $responseString contains csv result string
-        $content = implode(" ", $listvide);
-       // die($content);
-        $response = new Response($content);
-             // $response->headers->set('Content-type', 'text/csv');
-             // $response->headers->set('Content-Disposition', 'attachment; filename="ok.csv";');
-             //$response->sendHeaders();
-             //$response->setContent();
-             var_dump('ok');
-        die($response);
-        //fclose($fp);
+       //$response = new Response();
+        fclose($fp);
+        $response->headers->set('Content-type', 'text/csv');
+        $response->headers->set('Content-Disposition', 'attachment; filename="ok.csv";');
+        $response->sendHeaders();
+        $response->getContent();
 
         return $response;
 

@@ -33,7 +33,6 @@ class ParticipantController extends DatabaseModel
        /* $hello = new participants();*/
 
 
-
         //var_dump($this->pList->findAll());
         echo $this->twig->twig->render('participantList.html.twig', ['pList' => $this->pList->findAll()]);
     }
@@ -43,7 +42,7 @@ class ParticipantController extends DatabaseModel
         /* $hello = new participants();*/
 
 
-        $this->download->csvAction();
+        //$this->download->csvAction();
 
         //var_dump($id);
         //$convert = (int)$id;
