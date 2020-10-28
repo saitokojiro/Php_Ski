@@ -23,43 +23,13 @@ class ParticipantsRepository extends model\DatabaseModel
 
         return $stmt->fetch();
 
-/*
-        if(preg_match("/^[0-9]+$/", $id)){
-
-            $conv = intval($id);
-            //$db = new DatabaseModel();
-           // $conv = intval($id);
-            $query = "SELECT * FROM participants WHERE id='$conv';";
-            $stmt= self::$pdo->prepare($query)->execute();
-
-            $result = $stmt->fetchAll();
-            return $result;
-        }
-*/
-
-        /*
-          $conv = intval($id);
-            //$db = new DatabaseModel();
-           // $conv = intval($id);
-            $query = 'SELECT * FROM participants WHERE id = ?';
-
-            $stmt= self::$pdo->prepare($query);
-            $req = $stmt->execute(array($id));
-            $result = $req->fetch();
-            return $result;
-         */
-
     }
 
     public static function findAll()
     {
-        //$db = new DatabaseModel();
         $query = "SELECT * FROM participants";
         $stmt= self::$pdo->prepare($query);
         $stmt->execute();
-
-       // return var_dump($result[1]);
-        //var_dump($stmt->fetchAll(PDO::FETCH_ASSOC));
         return  $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

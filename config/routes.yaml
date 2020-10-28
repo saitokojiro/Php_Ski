@@ -16,4 +16,8 @@ participantAdd:
 participantCSV:
   path: /participant/csv
   defaults:
-    { controller: 'App\controller\CsvController::csvAction'}
+    { controller: 'App\controller\CsvController::csvExport'}
+participantCSVImport:
+  path: /participant/csv/import
+  defaults:
+    { controller: 'App\controller\CsvController::csvImport'}

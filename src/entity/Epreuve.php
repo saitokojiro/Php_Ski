@@ -2,17 +2,33 @@
 
 namespace App\entity;
 
+use DateTime;
+use DateTimeInterface;
+use Exception;
+
 class Epreuve
 {
 
+    private int $id;
+    private string $nom;
+    private DateTime $date;
+    private string $lieu;
+
     /**
-     * @expectedException InvalidArgumentException
-     * @expectedExceptionMessage Start param is empty !
+     * @return mixed
      */
+    public function getId()
+    {
+        return $this->id;
+    }
 
-
-    private $nom;
-    private $date;
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
 
     /**
      * @return mixed
@@ -25,7 +41,7 @@ class Epreuve
     /**
      * @param mixed $nom
      */
-    public function setNom($nom)
+    public function setNom($nom): void
     {
         if(!preg_match("/^[a-zA-Z]+$/", $nom)){
 
@@ -33,46 +49,52 @@ class Epreuve
         }
 
         $this->nom = $nom;
-
     }
 
-
     /**
-     * @return mixed
+     * @return DateTimeInterface
      */
-    public function getDate()
+    public function getDate(): DateTimeInterface
     {
-
         return $this->date;
     }
 
     /**
-     * @param mixed $date
+     * @param string $date
+     * @throws Exception
+     * @return  self
      */
-    public function setDate($date)
+    public function setDate(DateTimeInterface $dateloc): void
     {
+        if(!preg_match("/^([0-9]{4})-([0-1][0-9])-([0-3][0-9])$/", $dateloc)){
 
-        $currentDate = date("d-m-Y");
-        $tmstp1 = strtotime($date);
-        $tmstp2 = strtotime($currentDate);
-
-
-
-        if($tmstp1 < $tmstp2){
-            throw new \InvalidArgumentException('date dépasser');
-            //$this->date = $date;
-        }elseif($tmstp1 == $tmstp2){
-
-            $this->date = $date;
-        }else{
-            $this->date = $date;
+            throw new \InvalidArgumentException('containe number');
         }
 
-
-        //$this->date = $date;
+        $date = DateTime::createFromFormat('Y-m-d', $dateloc);
+        $this->date = $date;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getLieu()
+    {
+        return $this->lieu;
+    }
 
+    /**
+     * @param mixed $lieu
+     */
+    public function setLieu($lieu): void
+
+    {
+        if(!preg_match("/^[a-zA-ZÀ-ÿ0-9 \(\).-]{1,20}$/", $lieu)){
+
+            throw new \InvalidArgumentException('containe number');
+        }
+        $this->lieu = $lieu;
+    }
 
 
 }

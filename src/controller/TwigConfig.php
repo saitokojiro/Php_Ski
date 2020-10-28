@@ -6,8 +6,8 @@ use Twig\Loader\FilesystemLoader;
 
 class TwigConfig
 {
-    public $loader;
-    public $twig;
+    public FilesystemLoader $loader;
+    public Environment $twig;
 
     public function __construct()
     {

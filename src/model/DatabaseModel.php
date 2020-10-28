@@ -10,11 +10,6 @@ abstract class DatabaseModel
 {
 
     protected static $pdo = null ;
-/*
-    function __construct(PDO $pdo )
-    {
-        $this->pdo = $pdo;
-    }*/
 
     protected static function getPdo()
     {
@@ -27,16 +22,4 @@ abstract class DatabaseModel
         }
         return self::$pdo;
     }
-
-/*
-    public function dbConnexion()
-    {
-        try {
-            return new PDO('mysql:host=localhost;dbname=compets_management; charset=utf8'[, 'root'[, '']]);
-        } catch (PDOException $e) {
-            var_dump('error :' . $e);
-        }
-    }*/
-
-
 }
