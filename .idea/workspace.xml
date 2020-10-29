@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a25c7cb-b899-4090-aa11-bf43d980ba6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/controller/epreuveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/epreuveController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +88,7 @@
       <workItem from="1603698077682" duration="11112000" />
       <workItem from="1603876096609" duration="9910000" />
       <workItem from="1603953510167" duration="880000" />
-      <workItem from="1604008777812" duration="369000" />
+      <workItem from="1604008777812" duration="640000" />
     </task>
     <servers />
   </component>
