@@ -28,11 +28,11 @@ class CsvController
      */
     public function csvExport()
     {
-        $bdd = new ParticipantsRepository();
+        $partRepo = new ParticipantsRepository();
         $fp = fopen('php://output','w+');
         $templateCsv = array('id', 'nom','prenom','photo','categorie', 'profil','email','date_de_naissance', 'passage' ,'passage 1 ', 'passage 2');
         fputcsv($fp, $templateCsv );
-        foreach ($bdd->findAll() as $line)
+        foreach ($partRepo->findAll() as $line)
         {
             fputcsv($fp, $line);
         }
@@ -53,19 +53,19 @@ class CsvController
     {
 
         $twig = new TwigConfig();
-        $addall = new Participant();
+        $getAllPart = new Participant();
         /** @var UploadedFile $uploadfile*/
-        $uploadfile = $request->files->get('csv');
-        if($uploadfile == null)
+        $uploadedfile = $request->files->get('csv');
+        if($uploadedfile == null)
         {
             echo $twig->twig->render('test.html.twig');
         }else{
-            $csvDataJson = $this->csvAll($uploadfile);
+            $csvDataJson = $this->csvAll($uploadedfile);
             for($i = 0 ; $i<count($csvDataJson); $i++)
             {
-                $addall->setNom($csvDataJson[$i]->nom);
-                $addall->setPrenom($csvDataJson[$i]->prenom);
-                dump($addall->getAllVal());
+                $getAllPart->setNom($csvDataJson[$i]->nom);
+                $getAllPart->setPrenom($csvDataJson[$i]->prenom);
+                dump($getAllPart->getAllVal());
             }
             echo $twig->twig->render('test.html.twig');
         }
@@ -98,9 +98,9 @@ class CsvController
         }
         return $arrayCsv;
     }
-    public function csvAll($uploadfile)
+    public function csvAll($uploadedfile)
     {
-        $csvData = file_get_contents($uploadfile);
+        $csvData = file_get_contents($uploadedfile);
         $csvDatas = $this->replaceValue($csvData, ";", ",");
         $arrayCsv = $this->csvControl($csvDatas);
         $csvDataJson = $this->convertorJs($arrayCsv);

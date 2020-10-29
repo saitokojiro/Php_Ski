@@ -11,6 +11,7 @@
     +nouveau_participant()
     +suppression_participant()
  * */
+
 namespace App\entity;
 
 use DateInterval;
@@ -18,8 +19,8 @@ use DateTime;
 use Exception;
 
 
-class Participant {
-
+class Participant
+{
 
 
     private int $id;
@@ -77,8 +78,7 @@ class Participant {
      */
     public function setPrenom($prenom)
     {
-        if(!preg_match("/^[a-zA-Z]+$/", $prenom)){
-
+        if (!preg_match("/^[a-zA-Z]+$/", $prenom)) {
             throw new Exception('containe number');
         }
         $this->prenom = $prenom;
@@ -98,8 +98,7 @@ class Participant {
      */
     public function setNom($nom)
     {
-        if(!preg_match("/^[a-zA-Z]+$/", $nom)){
-
+        if (!preg_match("/^[a-zA-Z]+$/", $nom)) {
             throw new Exception('containe number');
         }
         $this->nom = $nom;
@@ -119,17 +118,14 @@ class Participant {
      */
     public function setAniv($aniv): void
     {
-
-        if(!preg_match("/^([0-9]{4})-([0-1][0-9])-([0-3][0-9])$/", $aniv)){
-
+        if (!preg_match("/^([0-9]{4})-([0-1][0-9])-([0-3][0-9])$/", $aniv)) {
             throw new Exception('containe number');
         }
         $date = DateTime::createFromFormat('Y-m-d', $aniv);
         $max = (new DateTime())->sub(new DateInterval('P100Y'));
         $min = (new DateTime())->sub(new DateInterval('P3Y'));
 
-        if($date < $max || $date > $min){
-
+        if ($date < $max || $date > $min) {
             throw new Exception('containe number');
         }
         $this->aniv = $date;
@@ -149,8 +145,7 @@ class Participant {
      */
     public function setEmail($email): void
     {
-        if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new Exception('containe number');
         }
 
@@ -171,8 +166,7 @@ class Participant {
      */
     public function setCategory($category): void
     {
-        if(!preg_match("/^[0-9A]+$/", $category)){
-
+        if (!preg_match("/^[0-9A]+$/", $category)) {
             throw new Exception('containe number');
         }
         $this->category = $category;
@@ -192,8 +186,7 @@ class Participant {
      */
     public function setProfil($profil): void
     {
-        if(!preg_match("/^[0-9A]+$/", $profil)){
-
+        if (!preg_match("/^[0-9A]+$/", $profil)) {
             throw new Exception('containe number');
         }
     }
@@ -201,9 +194,9 @@ class Participant {
 
     public function getAllVal()
     {
-        return[
-          'nom'=>$this->getNom(),
-          'prenom'=>$this->getPrenom(),
+        return [
+            'nom' => $this->getNom(),
+            'prenom' => $this->getPrenom(),
         ];
     }
 

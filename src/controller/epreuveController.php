@@ -1,15 +1,23 @@
 <?php
 namespace App\controller;
 
+
+use App\repository\EpreuveRepository;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
+
 class EpreuveController
 {
 
     public $index;
 
-    public function epreuveList()
+    public function EpreuveList(Request $request , Response $response , TwigConfig $twig): Response
     {
-        $twig = new TwigConfig();
-        echo $twig->twig->render('epreuveList.html.twig', []);
+        $eprRepo = new EpreuveRepository();
+        $template =  $twig->twig->render('epreuveList.html.twig', ["pList" => $eprRepo->findAll]);
+        $response = $response->setContent($template);
+        $response = $response->sendContent();
+        return $response;
     }
 
 }

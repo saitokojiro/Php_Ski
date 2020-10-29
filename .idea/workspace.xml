@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -21,12 +24,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c8152076-4834-4158-b41d-8e8afbb24bfd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/CsvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CsvController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/epreuveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/epreuveController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Participant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Participant.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/repository/ParticipantsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/ParticipantsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/epreuveList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/epreuveList.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,11 +149,13 @@
   <component name="PropertiesComponent">
     <property name="DBE.Init.BalloonShown" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Database/compet.sql" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -184,7 +190,7 @@
       <workItem from="1603470359880" duration="78000" />
       <workItem from="1603470755766" duration="7778000" />
       <workItem from="1603964350686" duration="30000" />
-      <workItem from="1603964420443" duration="3261000" />
+      <workItem from="1603964420443" duration="10063000" />
     </task>
     <servers />
   </component>
@@ -227,35 +233,39 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="581" height="466" key="DebuggerActiveHint/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603466478525" />
+    <state x="1939" y="249" width="717" height="678" key="EditFileWatcherDialog" timestamp="1603985358392">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1939" y="249" width="717" height="678" key="EditFileWatcherDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603985358392" />
     <state x="2118" y="215" key="FileChooserDialogImpl" timestamp="1603964610074">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="535" y="151" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603350209608" />
     <state x="2118" y="215" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603964610074" />
     <state x="-1022" y="237" key="FileChooserDialogImpl/0.0.1920.1040/-1680.28.1680.1010@0.0.1920.1040" timestamp="1602596924300" />
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1603470300499">
+    <state width="922" height="282" key="GridCell.Tab.0.bottom" timestamp="1603982100882">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603466564508" />
-    <state width="1877" height="387" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602753777244" />
+    <state width="922" height="282" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603982100882" />
+    <state width="1399" height="282" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603975289881" />
     <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603470300499" />
-    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1603470300494">
+    <state width="922" height="282" key="GridCell.Tab.0.center" timestamp="1603982100882">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603466564508" />
-    <state width="1877" height="387" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602753777244" />
+    <state width="922" height="282" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603982100882" />
+    <state width="1399" height="282" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603975289881" />
     <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1603470300494" />
-    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1603470300494">
+    <state width="922" height="282" key="GridCell.Tab.0.left" timestamp="1603982100882">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603466564507" />
-    <state width="1877" height="387" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602753777244" />
+    <state width="922" height="282" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603982100882" />
+    <state width="1399" height="282" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603975289881" />
     <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1603470300494" />
-    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1603470300494">
+    <state width="922" height="282" key="GridCell.Tab.0.right" timestamp="1603982100882">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603466564508" />
-    <state width="1877" height="387" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602753777244" />
+    <state width="922" height="282" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603982100882" />
+    <state width="1399" height="282" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603975289881" />
     <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603470300494" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1603470300504">
       <screen x="0" y="0" width="1366" height="728" />
@@ -316,19 +326,19 @@
     <state x="565" y="310" key="NewPhpFileDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1602853261646" />
     <state x="2160" y="443" key="NewPhpFileDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602745198588" />
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1680.28.1680.1010@0.0.1920.1040" timestamp="1602681191154" />
-    <state x="1799" y="116" key="SettingsEditor" timestamp="1602752037194">
+    <state x="1799" y="116" key="SettingsEditor" timestamp="1603985359499">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1799" y="116" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602752037194" />
+    <state x="1799" y="116" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603985359499" />
     <state x="-1301" y="141" key="SettingsEditor/0.0.1920.1040/-1680.28.1680.1010@0.0.1920.1040" timestamp="1602596928681" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1602768084909">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602768084909" />
-    <state x="1793" y="174" width="894" height="479" key="dock-window-1" timestamp="1603969764019">
+    <state x="1494" y="358" width="894" height="479" key="dock-window-1" timestamp="1603983724657">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1793" y="174" width="894" height="479" key="dock-window-1/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603969764019" />
+    <state x="1494" y="358" width="894" height="479" key="dock-window-1/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603983724657" />
     <state x="2024" y="163" width="1065" height="538" key="dock-window-1/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603453845928" />
     <state x="266" y="111" width="1065" height="538" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1603470423362" />
     <state x="-1687" y="28" width="1336" height="1017" key="dock-window-1/0.0.1920.1040/-1680.28.1680.1010@0.0.1920.1040" timestamp="1602680925286" />
@@ -340,12 +350,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603436643763" />
+    <state x="1739" y="382" width="885" height="391" key="scopes" timestamp="1603985356964">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1739" y="382" width="885" height="391" key="scopes/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603985356964" />
     <state x="1989" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603359926795">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1989" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603359926795" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Php_Ski@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1602752742340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
