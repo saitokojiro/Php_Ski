@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 class EpreuveController
 {
 
-    public $index;
+
 
     public function EpreuveList(Request $request , Response $response , TwigConfig $twig): Response
     {
