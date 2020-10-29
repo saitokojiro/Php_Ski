@@ -27,7 +27,7 @@ class ParticipantsRepository extends model\DatabaseModel
 
     public static function findAll()
     {
-        $query = "SELECT * FROM participants";
+        $query = "SELECT p.id , nom , prenom, photo ,c.categorie ,pa.profil , email , date_de_naissance  FROM participants p INNER JOIN categories c on p.categorie = c.id  INNER JOIN  profils pa on p.profil = pa.id";
         $stmt= self::$pdo->prepare($query);
         $stmt->execute();
         return  $stmt->fetchAll(PDO::FETCH_ASSOC);

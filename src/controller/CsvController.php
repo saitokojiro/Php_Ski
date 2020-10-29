@@ -29,8 +29,8 @@ class CsvController
     public function csvExport()
     {
         $bdd = new ParticipantsRepository();
-        $fp = fopen('php://output','w', "w");
-        $templateCsv = array('id', 'nom','prenom','photo','categorie', 'profil','email','date_de_naissance');
+        $fp = fopen('php://output','w+');
+        $templateCsv = array('id', 'nom','prenom','photo','categorie', 'profil','email','date_de_naissance', 'passage' ,'passage 1 ', 'passage 2');
         fputcsv($fp, $templateCsv );
         foreach ($bdd->findAll() as $line)
         {
@@ -53,16 +53,41 @@ class CsvController
     {
 
         $twig = new TwigConfig();
-        $requestGet = $request->request;
-        /*$addall = new Participant();
-        $addall->setNom($requestGet->get("nom"));
-        $addall->setPrenom($requestGet->get("prenom"));
-        $js = json_encode($addall->getAllVal());
-        *///dump($request->files->get('csv'));
+        $addall = new Participant();
         /** @var UploadedFile $uploadfile*/
-         $uploadfile = $request->files->get('csv');
-         $csvData = file_get_contents($uploadfile);
-        $lines = explode("\n", $csvData);
+        $uploadfile = $request->files->get('csv');
+        if($uploadfile == null)
+        {
+            echo $twig->twig->render('test.html.twig');
+        }else{
+            $csvDataJson = $this->csvAll($uploadfile);
+            for($i = 0 ; $i<count($csvDataJson); $i++)
+            {
+                $addall->setNom($csvDataJson[$i]->nom);
+                $addall->setPrenom($csvDataJson[$i]->prenom);
+                dump($addall->getAllVal());
+            }
+            echo $twig->twig->render('test.html.twig');
+        }
+    }
+
+    public function convertorJs($array)
+    {
+        $jsonEncode = json_encode($array);
+        return json_decode($jsonEncode);
+    }
+
+    public function replaceValue($array , $find , $replace)
+    {
+        if(strpos($array, ';') == true )
+        {
+            $array = str_replace($find,$replace, $array);
+        }
+        return $array;
+    }
+
+    public function csvControl($arrayCsvMain){
+        $lines = explode("\n", $arrayCsvMain);
         $head = str_getcsv(array_shift($lines));
         $arrayCsv = array();
         foreach ($lines as $line) {
@@ -70,32 +95,15 @@ class CsvController
             {
                 $arrayCsv[] = array_combine($head, str_getcsv($line));
             }
-
         }
-
-        $data = $this->convertorJs($arrayCsv);
-        for($i = 0 ; $i<count($data); $i++)
-        {
-            dump($data[$i]);
-        }
-
-
-
-         //$uploadfile->move('depots');
-
-
-
-       // dd();
-
-        //if()
-
-
-        echo $twig->twig->render('test.html.twig');
+        return $arrayCsv;
     }
-
-    public function convertorJs($array)
+    public function csvAll($uploadfile)
     {
-        $jsonEncode = json_encode($array);
-        return json_decode($jsonEncode);
+        $csvData = file_get_contents($uploadfile);
+        $csvDatas = $this->replaceValue($csvData, ";", ",");
+        $arrayCsv = $this->csvControl($csvDatas);
+        $csvDataJson = $this->convertorJs($arrayCsv);
+        return $csvDataJson;
     }
 }

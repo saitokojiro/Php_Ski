@@ -1,15 +1,15 @@
 <?php
 namespace App\controller;
 
-class epreuveController
+class EpreuveController
 {
 
     public $index;
 
-    public function epreuveView()
+    public function epreuveList()
     {
         $twig = new TwigConfig();
-        echo $twig->twig->render('index.html.twig', []);
+        echo $twig->twig->render('epreuveList.html.twig', []);
     }
 
 }

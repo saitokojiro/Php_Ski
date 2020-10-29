@@ -1,3 +1,4 @@
+# config/routes.yaml
 index:
   path: /
   defaults: { controller: 'App\controller\IndexController::index' }
@@ -21,3 +22,7 @@ participantCSVImport:
   path: /participant/csv/import
   defaults:
     { controller: 'App\controller\CsvController::csvImport'}
+EpreuveList:
+  path: /ListEpreuve
+  defaults:
+    { controller: 'App\controller\EpreuveController::EpreuveList'}
