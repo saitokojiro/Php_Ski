@@ -20,18 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a25c7cb-b899-4090-aa11-bf43d980ba6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Php_Ski.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Php_Ski.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CsvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CsvController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/TwigConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/TwigConfig.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Epreuve.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Epreuve.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Participant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Participant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DatabaseModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DatabaseModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/ParticipantsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/ParticipantsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/compet.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/compet.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +162,7 @@
       <workItem from="1603283386036" duration="3457000" />
       <workItem from="1603472051718" duration="11868000" />
       <workItem from="1603698077682" duration="11112000" />
-      <workItem from="1603876096609" duration="9515000" />
+      <workItem from="1603876096609" duration="9910000" />
     </task>
     <servers />
   </component>
