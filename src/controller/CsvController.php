@@ -82,13 +82,14 @@ class CsvController
         /** @var UploadedFile $uploadfile */
         $uploadedfile = $request->files->get('csv');
         if ($uploadedfile == null) {
-           return null ;
+            return null;
         } else {
             $csvDataJson = $this->csvAll($uploadedfile);
 
             return $csvDataJson;
         }
     }
+
     public function convertorJs($array)
     {
         $jsonEncode = json_encode($array);
@@ -110,15 +111,11 @@ class CsvController
         $arrayCsv = array();
         foreach ($lines as $line) {
             if (!$line == false) {
-
-                if(count($head) !== count(str_getcsv($line)))
-                {
+                if (count($head) !== count(str_getcsv($line))) {
                     return new Exception("contenu incorrect");
                 }
 
-                    $arrayCsv[] = array_combine($head, str_getcsv($line));
-
-
+                $arrayCsv[] = array_combine($head, str_getcsv($line));
             }
         }
         return $arrayCsv;

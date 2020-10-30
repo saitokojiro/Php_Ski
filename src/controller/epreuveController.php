@@ -39,7 +39,10 @@ class EpreuveController extends DatabaseModel
         $url = explode('=', $request->getPathInfo());
 
         dump($this->eprRepo->findAllParticipantsEp($url[1]));
-        $contentPage = $this->twig->twig->render('epreuveManagement.html.twig', ["pList" => $this->eprRepo->findAllParticipantsEp($url[1])]);
+        $contentPage = $this->twig->twig->render(
+            'epreuveManagement.html.twig',
+            ["pList" => $this->eprRepo->findAllParticipantsEp($url[1])]
+        );
         $response = $response->setContent($contentPage);
         return $response;
     }

@@ -1,4 +1,5 @@
 <?php
+
 require_once './vendor/autoload.php';
 
 use App\controller\ErrorController;
@@ -11,6 +12,7 @@ use Symfony\Component\Routing\Generator\UrlGenerator;
 use Symfony\Component\Routing\Loader\YamlFileLoader;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
+
 /*
 use Pimple\Container;
 
@@ -20,7 +22,6 @@ $container['pdo'] = function($c){
  };
 $container['db_dsn'] = "'mysql:host=localhost;dbname=compets_management; charset=utf8', 'root', ''";
 */
-
 
 
 try {
@@ -67,11 +68,9 @@ try {
               $controller->errorPage($error);*/
         }
     }
-
 } catch (ResourceNotFoundException $e) {
     $response = call_user_func_array(new ErrorController());
-} catch (MethodNotAllowedException $e)
-{
+} catch (MethodNotAllowedException $e) {
     $response = new Response($e->getMessage(), Response::HTTP_METHOD_NOT_ALLOWED);
 } finally {
     $response->send();

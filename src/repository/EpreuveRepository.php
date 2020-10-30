@@ -30,6 +30,7 @@ class EpreuveRepository extends model\DatabaseModel
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
     public static function findAllParticipantsEp(int $id)
     {
         $query = "SELECT p.id, p.photo, p.nom , p.prenom , p.date_de_naissance , r.epreuve_id  FROM resultat r INNER JOIN participants p on r.participant_id = p.id where r.epreuve_id = ?";

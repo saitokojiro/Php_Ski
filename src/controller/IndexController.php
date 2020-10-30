@@ -14,13 +14,11 @@ class IndexController
         $this->twig = new TwigConfig();
     }
 
-    public function index(Request $request , Response $response): Response
+    public function index(Request $request, Response $response): Response
     {
-
-        $contentPage =  $this->twig->twig->render('index.html.twig', []);
+        $contentPage = $this->twig->twig->render('index.html.twig', []);
         $response = $response->setContent($contentPage);
         return $response;
-
     }
 
 }

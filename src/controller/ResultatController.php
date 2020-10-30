@@ -22,13 +22,12 @@ class ResultatController extends DatabaseModel
         $this->uploaded = new CsvController();
     }
 
-    public function viewAllParticipant(Request $request, Response $response) : Response
+    public function viewAllParticipant(Request $request, Response $response): Response
     {
-
-        $test =  $this->uploaded->csvImportAnotherPage($request);
+        $test = $this->uploaded->csvImportAnotherPage($request);
         dump($test);
 
-        $contentPage = $this->twig->twig->render('resultatList.html.twig',['pList' => $test]);
+        $contentPage = $this->twig->twig->render('resultatList.html.twig', ['pList' => $test]);
         $response->setContent($contentPage);
         return $response;
     }

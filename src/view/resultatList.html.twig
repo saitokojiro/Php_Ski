@@ -13,11 +13,12 @@
         <div class="container">
             <div class="row">
                 <div> import CSV
-                    <form action="" method="post" enctype="multipart/form-data" >
+                    <form action="" method="post" enctype="multipart/form-data">
                         <input type="file" name="csv">
 
                         <button type="submit">ok</button>
-                    </form></div>
+                    </form>
+                </div>
                 <div class="col-12">
                     <table class="table">
                         <thead class="thead-dark">
@@ -37,14 +38,14 @@
                         <tbody>
                         {% for Dap in pList %}
                             <!--
-								<span>{{ Dap.id}}</span>
-								<span>{{ Dap.nom}}</span>
-								<span>{{ Dap.prenom}}</span>-->
+								<span>{{ Dap.id }}</span>
+								<span>{{ Dap.nom }}</span>
+								<span>{{ Dap.prenom }}</span>-->
                             <tr>
                                 <th scope="row">
-                                    <a href="/participant/id={{ Dap.id}}">{{ Dap.id}}</a>
+                                    <a href="/participant/id={{ Dap.id }}">{{ Dap.id }}</a>
                                 </th>
-                                <td>{{ Dap.nom}}</td>
+                                <td>{{ Dap.nom }}</td>
                                 <td>{{ Dap.prenom }}</td>
                                 <td>{{ Dap.categorie }}</td>
                                 <td>{{ Dap.profil }}</td>
@@ -52,7 +53,7 @@
                                 <td>{{ Dap.date_de_naissance }}</td>
                                 <td>{{ Dap.passage1 }}</td>
                                 <td>{{ Dap.passage2 }}</td>
-                                <td>{{ Dap.passage1 + Dap.passage2}}</td>
+                                <td>{{ Dap.passage1 + Dap.passage2 }}</td>
                             </tr>
                         {% endfor %}
 

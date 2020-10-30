@@ -21,11 +21,22 @@
   <component name="ChangeListManager">
     <list default="true" id="3a25c7cb-b899-4090-aa11-bf43d980ba6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/CsvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CsvController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ErrorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ErrorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ResultatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ResultatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/EpreuveRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/EpreuveRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/epreuveAdd.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/epreuveAdd.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/epreuveList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/epreuveList.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/epreuveManagement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/epreuveManagement.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/participantAdd.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/participantAdd.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/participantId.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/participantId.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/participantList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/participantList.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/resultatList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/resultatList.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/template.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/template.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/test.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/test.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +103,7 @@
       <workItem from="1603698077682" duration="11112000" />
       <workItem from="1603876096609" duration="9910000" />
       <workItem from="1603953510167" duration="880000" />
-      <workItem from="1604008777812" duration="17527000" />
+      <workItem from="1604008777812" duration="17805000" />
     </task>
     <servers />
   </component>
