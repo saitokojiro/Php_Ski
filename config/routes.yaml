@@ -30,3 +30,7 @@ EpreuveSelected:
   path: /Epreuve/id={id}
   defaults:
     { controller: 'App\controller\EpreuveController::epreuveSelected'}
+Resultat:
+  path: /epreuve/resultat/id={id}
+  defaults:
+    { controller: 'App\controller\EpreuveController::epreuveSelected'}
