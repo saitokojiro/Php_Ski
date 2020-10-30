@@ -21,22 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3a25c7cb-b899-4090-aa11-bf43d980ba6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CsvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CsvController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ErrorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ErrorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ResultatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ResultatController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/EpreuveRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/EpreuveRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/epreuveAdd.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/epreuveAdd.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/epreuveList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/epreuveList.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/epreuveManagement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/epreuveManagement.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/participantAdd.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/participantAdd.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/participantId.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/participantId.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/participantList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/participantList.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/resultatList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/resultatList.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/template.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/template.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/test.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/test.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Resultat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Resultat.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +89,7 @@
       <workItem from="1603698077682" duration="11112000" />
       <workItem from="1603876096609" duration="9910000" />
       <workItem from="1603953510167" duration="880000" />
-      <workItem from="1604008777812" duration="17805000" />
+      <workItem from="1604008777812" duration="23790000" />
     </task>
     <servers />
   </component>
@@ -127,6 +113,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="301" y="171" key="#CLI_Interpreters/0.0.1920.1040/-1680.21.1680.1010@0.0.1920.1040" timestamp="1603807482829" />
+    <state x="753" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1604070481926">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="753" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1680.21.1680.1010@0.0.1920.1040" timestamp="1604070481926" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604049372979">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -143,5 +133,9 @@
       <screen x="-1680" y="21" width="1680" height="1010" />
     </state>
     <state x="-1606" y="117" width="1484" height="997" key="dock-window-1/0.0.1920.1040/-1680.21.1680.1010@0.0.1920.1040" timestamp="1604050209074" />
+    <state x="-1561" y="157" width="1577" height="724" key="dock-window-2" timestamp="1604070733544">
+      <screen x="-1680" y="21" width="1680" height="1010" />
+    </state>
+    <state x="-1561" y="157" width="1577" height="724" key="dock-window-2/0.0.1920.1040/-1680.21.1680.1010@0.0.1920.1040" timestamp="1604070733544" />
   </component>
 </project>
