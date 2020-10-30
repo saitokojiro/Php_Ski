@@ -1,4 +1,5 @@
 <?php
+
 $user_CSV[0] = array('first_name', 'last_name', 'age');
 
 // very simple to increment with i++ if looping through a database result

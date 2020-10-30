@@ -1,10 +1,12 @@
 <?php
+
 namespace App\controller;
 
 use App\controller\TwigConfig;
 use App\model\DatabaseModel;
 use App\repository\ParticipantsRepository;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\RequestContext;
 
 //use App\controller\TwigConfig;
@@ -25,37 +27,22 @@ class ParticipantController extends DatabaseModel
         $this->pList = new ParticipantsRepository();
         $this->twig = new TwigConfig();
         $this->download = new CsvController();
-
     }
 
-    public function participantsView()
+    public function participantsView(Request $request, Response $response): Response
     {
-       /* $hello = new participants();*/
-
-
-        //var_dump($this->pList->findAll());
-        echo $this->twig->twig->render('participantList.html.twig', ['pList' => $this->pList->findAll()]);
+        $contentPage = $this->twig->twig->render('participantList.html.twig', ['pList' => $this->pList->findAll()]);
+        $response = $response->setContent($contentPage);
+        return $response;
     }
 
-    public function participantView($id)
+    public function participantView(Request $request, Response $response): Response
     {
-        /* $hello = new participants();*/
-
-
-        //$this->download->csvAction();
-
-        //var_dump($id);
-        //$convert = (int)$id;
-        //$request = Request::createFromGlobals();
-        //var_dump($request);
-        //var_dump($this->pList->find($id));
         $request = Request::createFromGlobals();
-
-        //var_dump($request->getPathInfo());
-        $url= explode('=', $request->getPathInfo());
-        //var_dump($url[1]);
-        //var_dump($this->pList->find($url[1]));
-        echo $this->twig->twig->render('participantId.html.twig', ['pList' => $this->pList->find($url[1])]);
+        $url = explode('=', $request->getPathInfo());
+        $contentPage = $this->twig->twig->render('participantId.html.twig', ['pList' => $this->pList->find($url[1])]);
+        $response = $response->setContent($contentPage);
+        return $response;
     }
 
 }

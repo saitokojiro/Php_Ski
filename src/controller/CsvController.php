@@ -2,6 +2,7 @@
 
 
 namespace App\controller;
+
 use App\entity\Participant;
 use App\repository\ParticipantsRepository;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -29,16 +30,27 @@ class CsvController
     public function csvExport()
     {
         $partRepo = new ParticipantsRepository();
-        $fp = fopen('php://output','w+');
-        $templateCsv = array('id', 'nom','prenom','photo','categorie', 'profil','email','date_de_naissance', 'passage' ,'passage 1 ', 'passage 2');
-        fputcsv($fp, $templateCsv );
-        foreach ($partRepo->findAll() as $line)
-        {
+        $fp = fopen('php://output', 'w+');
+        $templateCsv = array(
+            'id',
+            'nom',
+            'prenom',
+            'photo',
+            'categorie',
+            'profil',
+            'email',
+            'date_de_naissance',
+            'passage',
+            'passage 1 ',
+            'passage 2'
+        );
+        fputcsv($fp, $templateCsv);
+        foreach ($partRepo->findAll() as $line) {
             fputcsv($fp, $line);
         }
         $response = new Response(stream_get_contents($fp));
 
-       //$response = new Response();
+        //$response = new Response();
         fclose($fp);
         $response->headers->set('Content-type', 'text/csv');
         $response->headers->set('Content-Disposition', 'attachment; filename="ok.csv";');
@@ -46,23 +58,19 @@ class CsvController
         $response->getContent();
 
         return $response;
-
     }
 
     public function csvImport(Request $request)
     {
-
         $twig = new TwigConfig();
         $getAllPart = new Participant();
-        /** @var UploadedFile $uploadfile*/
+        /** @var UploadedFile $uploadfile */
         $uploadedfile = $request->files->get('csv');
-        if($uploadedfile == null)
-        {
+        if ($uploadedfile == null) {
             echo $twig->twig->render('test.html.twig');
-        }else{
+        } else {
             $csvDataJson = $this->csvAll($uploadedfile);
-            for($i = 0 ; $i<count($csvDataJson); $i++)
-            {
+            for ($i = 0; $i < count($csvDataJson); $i++) {
                 $getAllPart->setNom($csvDataJson[$i]->nom);
                 $getAllPart->setPrenom($csvDataJson[$i]->prenom);
                 dump($getAllPart->getAllVal());
@@ -77,27 +85,27 @@ class CsvController
         return json_decode($jsonEncode);
     }
 
-    public function replaceValue($array , $find , $replace)
+    public function replaceValue($array, $find, $replace)
     {
-        if(strpos($array, ';') == true )
-        {
-            $array = str_replace($find,$replace, $array);
+        if (strpos($array, ';') == true) {
+            $array = str_replace($find, $replace, $array);
         }
         return $array;
     }
 
-    public function csvControl($arrayCsvMain){
+    public function csvControl($arrayCsvMain)
+    {
         $lines = explode("\n", $arrayCsvMain);
         $head = str_getcsv(array_shift($lines));
         $arrayCsv = array();
         foreach ($lines as $line) {
-            if(!$line == false)
-            {
+            if (!$line == false) {
                 $arrayCsv[] = array_combine($head, str_getcsv($line));
             }
         }
         return $arrayCsv;
     }
+
     public function csvAll($uploadedfile)
     {
         $csvData = file_get_contents($uploadedfile);

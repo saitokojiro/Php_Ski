@@ -43,8 +43,7 @@ class Epreuve
      */
     public function setNom($nom): void
     {
-        if(!preg_match("/^[a-zA-Z]+$/", $nom)){
-
+        if (!preg_match("/^[a-zA-Z]+$/", $nom)) {
             throw new \InvalidArgumentException('containe number');
         }
 
@@ -61,13 +60,12 @@ class Epreuve
 
     /**
      * @param string $date
-     * @throws Exception
      * @return  self
+     * @throws Exception
      */
     public function setDate(DateTimeInterface $dateloc): void
     {
-        if(!preg_match("/^([0-9]{4})-([0-1][0-9])-([0-3][0-9])$/", $dateloc)){
-
+        if (!preg_match("/^([0-9]{4})-([0-1][0-9])-([0-3][0-9])$/", $dateloc)) {
             throw new \InvalidArgumentException('containe number');
         }
 
@@ -87,10 +85,8 @@ class Epreuve
      * @param mixed $lieu
      */
     public function setLieu($lieu): void
-
     {
-        if(!preg_match("/^[a-zA-ZÀ-ÿ0-9 \(\).-]{1,20}$/", $lieu)){
-
+        if (!preg_match("/^[a-zA-ZÀ-ÿ0-9 \(\).-]{1,20}$/", $lieu)) {
             throw new \InvalidArgumentException('containe number');
         }
         $this->lieu = $lieu;

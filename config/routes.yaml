@@ -25,4 +25,8 @@ participantCSVImport:
 EpreuveList:
   path: /ListEpreuve
   defaults:
-    { controller: 'App\controller\EpreuveController::EpreuveList'}
+    { controller: 'App\controller\EpreuveController::epreuveList'}
+EpreuveSelected:
+  path: /Epreuve/id={id}
+  defaults:
+    { controller: 'App\controller\EpreuveController::epreuveSelected'}

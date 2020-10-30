@@ -26,17 +26,15 @@ class Passage
      */
     public function setNb($nb)
     {
-        if($nb == 2 )
-        {
+        if ($nb == 2) {
             //throw new \InvalidArgumentException( 'passage'. $nb);
             $this->nb = $nb;
-        }elseif ($nb == 1){
+        } elseif ($nb == 1) {
             //throw new \InvalidArgumentException( 'passage'. $nb);
             $this->nb = $nb;
+        } else {
+            throw new \InvalidArgumentException('passage' . $nb);
         }
-        else{
-            throw new \InvalidArgumentException( 'passage'. $nb);
-        }
-       // $this->nb = $nb;
+        // $this->nb = $nb;
     }
 }

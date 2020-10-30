@@ -21,8 +21,7 @@ $container['db_dsn'] = "'mysql:host=localhost;dbname=compets_management; charset
 
 
 
-try
-{
+try {
     // Load routes from the yaml file
     $fileLocator = new FileLocator(array(__DIR__));
     $loader = new YamlFileLoader($fileLocator);
@@ -47,51 +46,28 @@ try
     $response = new Response();
 
 
-
     if ($params[0] !== null) {
-
         $controller = $params[0];
         $action = $params[1];
         $controller = new $controller();
 
         if (method_exists($controller, $action)) {
-
-            call_user_func_array([$controller, $action], [$request, $response]);
+            $responseController = call_user_func_array([$controller, $action], [$request, $response]);
+            if (!$responseController instanceof Response) {
+                throw new Exception('Not a Response instance');
+            }
+            $responseController->send();
         } else {
             // On envoie le code réponse 404
             http_response_code(404);
             //$error = "La page recherchée n'existe pas";
             /*$controller = new HomeController();
-        $controller->errorPage($error);*/
+              $controller->errorPage($error);*/
         }
     }
-/*
-    echo '<pre>';
-    print_r($parameters);
 
-    echo 'Generated URL: ' . $url;
-    exit;*/
 } catch (ResourceNotFoundException $e) {
     echo $e->getMessage();
 }
-/*
-$uidname = uniqid();
-header('Content-Type: text/csv');
-header('Content-Disposition: attachment; filename= "'.$uidname.'.csv"');
 
-$list = array (
-    array("Peter", "Griffin" ,"Oslo", "Norway"),
-    array("Glenn", "Quagmire", "Oslo", "Norway")
-);
-$fp = fopen('php://output', 'wb');
-foreach ($list as $line) {
-    // though CSV stands for "comma separated value"
-    // in many countries (including France) separator is ";"
-    fputcsv($fp, $line, ',');
-}
-fclose($fp);
-*/
-
-//fclose($fp);
-// container
 

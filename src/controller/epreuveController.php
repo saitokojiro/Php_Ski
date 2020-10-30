@@ -1,22 +1,40 @@
 <?php
+
 namespace App\controller;
 
 
+use App\model\DatabaseModel;
 use App\repository\EpreuveRepository;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
-class EpreuveController
+class EpreuveController extends DatabaseModel
 {
 
+    public $eprRepo;
+    public $twig;
 
-
-    public function EpreuveList(Request $request , Response $response , TwigConfig $twig): Response
+    function __construct()
     {
-        $eprRepo = new EpreuveRepository();
-        $template =  $twig->twig->render('epreuveList.html.twig', ["pList" => $eprRepo->findAll]);
-        $response = $response->setContent($template);
-        $response = $response->sendContent();
+        $this->eprRepo = new EpreuveRepository();
+        $this->twig = new TwigConfig();
+        //$this->download = new CsvController();
+    }
+
+
+    public function epreuveList(Request $request, Response $response): Response
+    {
+        $contentPage = $this->twig->twig->render('epreuveList.html.twig', ["pList" => $this->eprRepo->findAll()]);
+        $response = $response->setContent($contentPage);
+        return $response;
+    }
+
+    public function epreuveSelected(Request $request, Response $response): Response
+    {
+        $request = Request::createFromGlobals();
+        $url = explode('=', $request->getPathInfo());
+        $contentPage = $this->twig->twig->render('epreuveManagement.html.twig', ["pList" => $this->eprRepo->find($url[1])]);
+        $response = $response->setContent($contentPage);
         return $response;
     }
 
