@@ -23,6 +23,7 @@
 							<th scope="col">Profil</th>
 							<th scope="col">Lieu</th>
 							<th scope="col">Fin inscription</th>
+							<th scope="col">Voir Resultat</th>
 						</tr>
 						</thead>
 						<tbody>
@@ -40,6 +41,18 @@
 								<td>{{ Dap.profil }}</td>
 								<td>{{ Dap.lieu }}</td>
 								<td>{{ Dap.lifeDate }}</td>
+								{% if Dap.name_status == "Resultat" %}
+									<td><a href="#">Resultat</a></td>
+								{% endif %}
+								{% if Dap.name_status == "Close" %}
+									<td><a href="#">Close</a></td>
+								{% endif %}
+								{% if Dap.name_status == "En Cours" %}
+									<td><a href="#">En Cours</a></td>
+								{% endif %}
+								{% if Dap.name_status == "Annulé" %}
+									<td><a href="#">Annulé</a></td>
+								{% endif %}
 							</tr>
 						{% endfor %}
 

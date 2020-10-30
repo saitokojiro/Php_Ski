@@ -25,9 +25,16 @@ class EpreuveRepository extends model\DatabaseModel
 
     public static function findAll()
     {
-        $query = "SELECT e.id , nom ,c.categorie ,pa.profil, lieu, lifeDate   FROM epreuves e INNER JOIN categories c on e.categorie = c.id  INNER JOIN  profils pa on e.profil = pa.id";
+        $query = "SELECT e.id , nom ,c.categorie ,pa.profil, lieu, lifeDate , s.name_status   FROM epreuves e INNER JOIN categories c on e.categorie = c.id  INNER JOIN  profils pa on e.profil = pa.id INNER JOIN statustb s on e.status = s.id";
         $stmt = self::$pdo->prepare($query);
         $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public static function findAllParticipantsEp(int $id)
+    {
+        $query = "SELECT p.id, p.photo, p.nom , p.prenom , p.date_de_naissance , r.epreuve_id  FROM resultat r INNER JOIN participants p on r.participant_id = p.id where r.epreuve_id = ?";
+        $stmt = self::$pdo->prepare($query);
+        $stmt->execute(array($id));
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

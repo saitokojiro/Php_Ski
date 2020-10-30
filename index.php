@@ -4,6 +4,7 @@ require_once './vendor/autoload.php';
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Exception\MethodNotAllowedException;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Symfony\Component\Routing\Loader\YamlFileLoader;
@@ -56,7 +57,7 @@ try {
             if (!$responseController instanceof Response) {
                 throw new Exception('Not a Response instance');
             }
-            $responseController->send();
+            //$responseController->send();
         } else {
             // On envoie le code réponse 404
             http_response_code(404);
@@ -67,7 +68,12 @@ try {
     }
 
 } catch (ResourceNotFoundException $e) {
-    echo $e->getMessage();
+    $response = call_user_func_array(new ErrorController());
+} catch (MethodNotAllowedException $e)
+{
+    $response = new Response($e->getMessage(), Response::HTTP_METHOD_NOT_ALLOWED);
+} finally {
+    $response->send();
 }
 
 

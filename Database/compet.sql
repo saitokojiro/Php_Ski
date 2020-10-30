@@ -17,7 +17,8 @@ CREATE TABLE IF NOT EXISTS epreuves
     categorie int(11) NOT NULL,
     profil int(11) NOT NULL,
     lieu VARCHAR(32) NOT NULL,
-    lifeDate DATE NOT NULL
+    lifeDate DATE NOT NULL,
+    status int(11) NOT NULL
 )Engine=InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS categories
@@ -49,24 +50,24 @@ CREATE TABLE IF NOT EXISTS participants
 
 CREATE TABLE IF NOT EXISTS resultat
 (
-    id INT(11)PRIMARY KEY,
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
     epreuve_id INT(11)  NULL,
     participant_id INT(11) NULL,
     nombre_passage INT(11) NULL,
     temps_one TIME NULL,
     temps_two TIME NULL
-    /*CONSTRAINT fk_participants_resultat
-        FOREIGN KEY (participant_id)
-        REFERENCES participants(participant_id),
-    CONSTRAINT fk_epreuves_resultat
-        FOREIGN KEY (epreuve_id)
-        REFERENCES epreuves(epreuve_id)*/
 )Engine=InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-INSERT INTO epreuves (nom, categorie, profil, lieu, lifeDate)
+CREATE TABLE IF NOT EXISTS statusTb
+(
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    name_status VARCHAR (33) NOT NULL
+)Engine=InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+INSERT INTO epreuves (nom, categorie, profil, lieu, lifeDate , status)
 VALUE
-('blog','6', '2', 'paris','2019-09-24 16:15:54'),
-('blog','6', '2', 'paris','2019-09-24 16:15:54');
+('blogs','6', '2', 'paris','2019-09-24 16:15:54' , 2),
+('blog','6', '2', 'paris','2019-09-24 16:15:54', 2);
 
 INSERT INTO resultat (epreuve_id, participant_id, nombre_passage, temps_one, temps_two)
 VALUE
@@ -94,6 +95,13 @@ INSERT INTO participants (photo, nom, prenom, categorie, profil, email, date_de_
 VALUE
 ("flopi.jpg","plopi","flo","6","2","hello@test.fr", "2019-09-24 16:15:54"),
 ("flopi.jpg","plopi","flo","6","2","hello@tests.fr", "2019-09-24 16:15:54");
+
+INSERT INTO statusTb (name_status)
+VALUE
+("En cours"),
+("Close"),
+("Resultat"),
+("Annulé");
 
 -- participants
  ALTER TABLE participants
@@ -124,3 +132,9 @@ VALUE
  ALTER TABLE resultat
  ADD CONSTRAINT fk_epreuves_resultat
  FOREIGN KEY (epreuve_id) REFERENCES epreuves(id);
+
+-- epreuves - status
+
+ ALTER TABLE epreuves
+ ADD CONSTRAINT fk_epreuves_status
+ FOREIGN KEY (status) REFERENCES statusTb(id);
