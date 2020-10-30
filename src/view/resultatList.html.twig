@@ -12,18 +12,26 @@
         <br>
         <div class="container">
             <div class="row">
-                <div> <a href="/participant/new">ajout d'un participant</a> </div>
+                <div> import CSV
+                    <form action="" method="post" enctype="multipart/form-data" >
+                        <input type="file" name="csv">
+
+                        <button type="submit">ok</button>
+                    </form></div>
                 <div class="col-12">
                     <table class="table">
                         <thead class="thead-dark">
                         <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Nom</th>
-                            <th scope="col">Categorie</th>
-                            <th scope="col">Profil</th>
-                            <th scope="col">Lieu</th>
-                            <th scope="col">Fin inscription</th>
-                            <th scope="col">Voir Resultat</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">categorie</th>
+                            <th scope="col">profil</th>
+                            <th scope="col">email</th>
+                            <th scope="col">date de naissance</th>
+                            <th scope="col">temps 1</th>
+                            <th scope="col">temps 2</th>
+                            <th scope="col">total</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -34,25 +42,17 @@
 								<span>{{ Dap.prenom}}</span>-->
                             <tr>
                                 <th scope="row">
-                                    <a href="/Epreuve/id={{ Dap.id}}">{{ Dap.id}}</a>
+                                    <a href="/participant/id={{ Dap.id}}">{{ Dap.id}}</a>
                                 </th>
                                 <td>{{ Dap.nom}}</td>
+                                <td>{{ Dap.prenom }}</td>
                                 <td>{{ Dap.categorie }}</td>
                                 <td>{{ Dap.profil }}</td>
-                                <td>{{ Dap.lieu }}</td>
-                                <td>{{ Dap.lifeDate }}</td>
-                                {% if Dap.name_status == "Resultat" %}
-                                    <td><a href="#">Resultat</a></td>
-                                {% endif %}
-                                {% if Dap.name_status == "Close" %}
-                                    <td><a href="#">Close</a></td>
-                                {% endif %}
-                                {% if Dap.name_status == "En Cours" %}
-                                    <td><a href="#">En Cours</a></td>
-                                {% endif %}
-                                {% if Dap.name_status == "Annulé" %}
-                                    <td><a href="#">Annulé</a></td>
-                                {% endif %}
+                                <td>{{ Dap.email }}</td>
+                                <td>{{ Dap.date_de_naissance }}</td>
+                                <td>{{ Dap.passage1 }}</td>
+                                <td>{{ Dap.passage2 }}</td>
+                                <td>{{ Dap.passage1 + Dap.passage2}}</td>
                             </tr>
                         {% endfor %}
 

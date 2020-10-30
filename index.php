@@ -1,6 +1,7 @@
 <?php
 require_once './vendor/autoload.php';
 
+use App\controller\ErrorController;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

@@ -5,6 +5,7 @@ namespace App\controller;
 
 use App\entity\Participant;
 use App\repository\ParticipantsRepository;
+use phpDocumentor\Reflection\Types\Void_;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 use Symfony\Component\HttpFoundation\File\File;
@@ -12,11 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
-use Symfony\Component\Serializer\Encoder\CsvEncoder;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Encoder\XmlEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
+use Exception;
 
 
 class CsvController
@@ -41,8 +38,8 @@ class CsvController
             'email',
             'date_de_naissance',
             'passage',
-            'passage 1 ',
-            'passage 2'
+            'passage_1 ',
+            'passage_2'
         );
         fputcsv($fp, $templateCsv);
         foreach ($partRepo->findAll() as $line) {
@@ -79,6 +76,19 @@ class CsvController
         }
     }
 
+    public function csvImportAnotherPage($request)
+    {
+        $twig = new TwigConfig();
+        /** @var UploadedFile $uploadfile */
+        $uploadedfile = $request->files->get('csv');
+        if ($uploadedfile == null) {
+           return null ;
+        } else {
+            $csvDataJson = $this->csvAll($uploadedfile);
+
+            return $csvDataJson;
+        }
+    }
     public function convertorJs($array)
     {
         $jsonEncode = json_encode($array);
@@ -100,7 +110,15 @@ class CsvController
         $arrayCsv = array();
         foreach ($lines as $line) {
             if (!$line == false) {
-                $arrayCsv[] = array_combine($head, str_getcsv($line));
+
+                if(count($head) !== count(str_getcsv($line)))
+                {
+                    return new Exception("contenu incorrect");
+                }
+
+                    $arrayCsv[] = array_combine($head, str_getcsv($line));
+
+
             }
         }
         return $arrayCsv;

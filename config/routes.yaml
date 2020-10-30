@@ -33,4 +33,4 @@ EpreuveSelected:
 Resultat:
   path: /epreuve/resultat/id={id}
   defaults:
-    { controller: 'App\controller\EpreuveController::epreuveSelected'}
+    { controller: 'App\controller\ResultatController::viewAllParticipant'}
