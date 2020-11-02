@@ -61,6 +61,7 @@ class CsvController
     {
         $twig = new TwigConfig();
         $getAllPart = new Participant();
+        dump($request);
         /** @var UploadedFile $uploadfile */
         $uploadedfile = $request->files->get('csv');
         if ($uploadedfile == null) {

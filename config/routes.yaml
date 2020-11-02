@@ -5,7 +5,7 @@ index:
 participants:
   path: /participants
   defaults:
-    { controller: 'App\controller\ParticipantController::participantsView' }
+    { controller: 'App\controller\ParticipantController::participantsViewList' }
 participant:
   path: /participant/id={id}
   defaults:
@@ -23,11 +23,15 @@ participantCSVImport:
   defaults:
     { controller: 'App\controller\CsvController::csvImport'}
 EpreuveList:
-  path: /ListEpreuve
+  path: /listepreuve
   defaults:
     { controller: 'App\controller\EpreuveController::epreuveList'}
+EpreuveAdd:
+  path: /epreuve/new
+  defaults:
+    { controller: 'App\controller\EpreuveController::epreuveAdd'}
 EpreuveSelected:
-  path: /Epreuve/id={id}
+  path: /epreuve/id={id}
   defaults:
     { controller: 'App\controller\EpreuveController::epreuveSelected'}
 Resultat:

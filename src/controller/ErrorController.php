@@ -16,7 +16,7 @@ class ErrorController
         $this->twig = new TwigConfig();
     }
 
-    public function __invoke(Request $request, Response $response): Response
+    public function pageError( $error , Request $request, Response $response): Response
     {
         $contentPage = $this->twig->twig->render('error.html.twig', 404);
         $response->setContent($contentPage);

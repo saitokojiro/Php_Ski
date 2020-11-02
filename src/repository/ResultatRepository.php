@@ -51,28 +51,32 @@ class ResultatRepository extends model\DatabaseModel
             */
 
         dump($content);
-        $query = "SELECT p.id FROM participants p where p.nom = ? AND p.prenom = ?";
-        $stmt = self::$pdo->prepare($query);
-        $queryAdd = "insert into resultat(epreuve_id, participant_id, nombre_passage, temps_one, temps_two) value (?,?,?,?,?)";
-        $stmtAdd = self::$pdo->prepare($queryAdd);
-        foreach ($content as $line) {
-            /*dump($line->id);
-            dump($line->profil);
-            dump($line->nom);
-            dump($line->prenom);
-            dump($line->categorie);
-            dump($line->email);
-            dump($line->date_de_naissance);
-            dump($line->passage);
-            dump($line->passage1);
-            dump($line->passage2);*/
-            $stmt->execute(array($line->nom, $line->prenom));
-            $test = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if(!$content == null)
+        {
+            $query = "SELECT p.id FROM participants p where p.nom = ? AND p.prenom = ?";
+            $stmt = self::$pdo->prepare($query);
+            $queryAdd = "insert into resultat(epreuve_id, participant_id, nombre_passage, temps_one, temps_two) value (?,?,?,?,?)";
+            $stmtAdd = self::$pdo->prepare($queryAdd);
+            foreach ($content as $line) {
+                /*dump($line->id);
+                dump($line->profil);
+                dump($line->nom);
+                dump($line->prenom);
+                dump($line->categorie);
+                dump($line->email);
+                dump($line->date_de_naissance);
+                dump($line->passage);
+                dump($line->passage1);
+                dump($line->passage2);*/
+                $stmt->execute(array($line->nom, $line->prenom));
+                $test = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            for ($i = 0; $i < count($test); $i++) {
-                $idp = json_decode(json_encode($test))[$i]->id;
-                $stmtAdd->execute(array($id, $idp, $line->passage, $line->passage1, $line->passage2));
+                for ($i = 0; $i < count($test); $i++) {
+                    $idp = json_decode(json_encode($test))[$i]->id;
+                    $stmtAdd->execute(array($id, $idp, $line->passage, $line->passage1, $line->passage2));
+                }
             }
         }
+
     }
 }

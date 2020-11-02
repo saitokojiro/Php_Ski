@@ -59,7 +59,7 @@ try {
             if (!$responseController instanceof Response) {
                 throw new Exception('Not a Response instance');
             }
-            //$responseController->send();
+            $responseController->send();
         } else {
             // On envoie le code réponse 404
             http_response_code(404);
@@ -68,12 +68,10 @@ try {
               $controller->errorPage($error);*/
         }
     }
-} catch (ResourceNotFoundException $e) {
-    $response = call_user_func_array(new ErrorController());
-} catch (MethodNotAllowedException $e) {
-    $response = new Response($e->getMessage(), Response::HTTP_METHOD_NOT_ALLOWED);
-} finally {
-    $response->send();
+}catch (ResourceNotFoundException $e) {
+    echo $e->getMessage();
 }
+
+
 
 
