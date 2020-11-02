@@ -2,6 +2,7 @@
 
 namespace App\entity;
 
+
 class Resultat
 {
     public $id;
@@ -156,7 +157,13 @@ class Resultat
      */
     public function setPassageOne($passageOne): void
     {
-        $this->passageOne = $passageOne;
+        if (!preg_match("/^([0-1][0-9]):([0-3][0-9])$/", $passageOne)) {
+            throw new \InvalidArgumentException('containe number');
+        }
+
+        $passageOneC = explode(':', (int)$passageOne);
+        $passageOneSec = ($passageOneC[0] * 60) + $passageOneC[1];
+        $this->passageOne = $passageOneSec;
     }
 
     /**
@@ -170,9 +177,22 @@ class Resultat
     /**
      * @param mixed $passageTwo
      */
-    public function setPassageTwo($passageTwo): void
+    public function setPassageTwo(Time $passageTwo): void
     {
-        $this->passageTwo = $passageTwo;
+        if (!preg_match("/^([0-1][0-9]):([0-3][0-9])$/", $passageTwo)) {
+            throw new \InvalidArgumentException('containe number');
+        }
+
+        $passageTwoC = explode(':', (int)$passageTwo);
+        $passageTwoSec = ($passageTwoC[0] * 60) + $passageTwoC[1];
+        $this->passageTwo = $passageTwoSec;
+    }
+
+
+    public function passagetotal()
+    {
+        $result = $this->getPassageOne() + $this->getPassageTwo();
+        return gmdate("H:i:s", $result);;
     }
 
 }

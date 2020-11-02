@@ -68,7 +68,7 @@ try {
               $controller->errorPage($error);*/
         }
     }
-}catch (ResourceNotFoundException $e) {
+} catch (ResourceNotFoundException $e) {
     echo $e->getMessage();
 }
 
