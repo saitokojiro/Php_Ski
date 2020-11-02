@@ -5,13 +5,11 @@ namespace App\controller;
 
 use App\entity\Participant;
 use App\repository\ParticipantsRepository;
-use phpDocumentor\Reflection\Types\Void_;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\StreamedResponse;
+
 
 use Exception;
 
@@ -47,7 +45,6 @@ class CsvController
         }
         $response = new Response(stream_get_contents($fp));
 
-        //$response = new Response();
         fclose($fp);
         $response->headers->set('Content-type', 'text/csv');
         $response->headers->set('Content-Disposition', 'attachment; filename="ok.csv";');

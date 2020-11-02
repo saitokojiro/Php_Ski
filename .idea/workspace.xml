@@ -21,11 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="3a25c7cb-b899-4090-aa11-bf43d980ba6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Participants.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Resultat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Resultat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/error.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/error.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CsvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CsvController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ParticipantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ParticipantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ResultatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ResultatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/ResultatRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/ResultatRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/epreuveList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/epreuveList.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/epreuveManagement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/epreuveManagement.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/template.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/template.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/test.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/test.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +177,7 @@
       <workItem from="1604008777812" duration="23907000" />
       <workItem from="1604185618219" duration="14572000" />
       <workItem from="1604247776033" duration="28000" />
-      <workItem from="1604307594344" duration="4474000" />
+      <workItem from="1604307594344" duration="6821000" />
     </task>
     <servers />
   </component>

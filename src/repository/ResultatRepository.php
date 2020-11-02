@@ -41,15 +41,6 @@ class ResultatRepository extends model\DatabaseModel
 
     public static function addParticipantsResult($content, $id)
     {
-        /*SELECT p.id, r.epreuve_id  FROM resultat r INNER JOIN participants p on r.participant_id = p.id where r.epreuve_id = 1 AND p.nom = ? AND p.prenom = ? ;
-            insert into resultat(epreuve_id, participant_id, nombre_passage, temps_one, temps_two) value (?, ?, ?, ?, ?);*/
-        /*
-                $query = "SELECT p.id, p.photo, p.nom , p.prenom , p.date_de_naissance , r.epreuve_id  FROM resultat r INNER JOIN participants p on r.participant_id = p.id where r.epreuve_id = ?";
-                $stmt = self::$pdo->prepare($query);
-                $stmt->execute(array($id));
-                return $stmt->fetchAll(PDO::FETCH_ASSOC);
-            */
-
         dump($content);
         if (!$content == null) {
             $query = "SELECT p.id FROM participants p where p.nom = ? AND p.prenom = ?";

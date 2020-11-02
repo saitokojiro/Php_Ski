@@ -3,13 +3,11 @@
 namespace App\controller;
 
 
-use App\controller\TwigConfig;
 use App\model\DatabaseModel;
-use App\repository\ParticipantsRepository;
 use App\repository\ResultatRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use App\controller\CsvController;
+
 
 
 class ResultatController extends DatabaseModel
@@ -33,9 +31,5 @@ class ResultatController extends DatabaseModel
         $contentPage = $this->twig->twig->render('resultatList.html.twig', ['pList' => $test]);
         $response->setContent($contentPage);
         return $response;
-    }
-
-    public function ParticipantResult()
-    {
     }
 }
