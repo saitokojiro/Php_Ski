@@ -51,8 +51,7 @@ class ResultatRepository extends model\DatabaseModel
             */
 
         dump($content);
-        if(!$content == null)
-        {
+        if (!$content == null) {
             $query = "SELECT p.id FROM participants p where p.nom = ? AND p.prenom = ?";
             $stmt = self::$pdo->prepare($query);
             $queryAdd = "insert into resultat(epreuve_id, participant_id, nombre_passage, temps_one, temps_two) value (?,?,?,?,?)";
@@ -77,6 +76,5 @@ class ResultatRepository extends model\DatabaseModel
                 }
             }
         }
-
     }
 }

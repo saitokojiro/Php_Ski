@@ -47,4 +47,12 @@ class EpreuveController extends DatabaseModel
         return $response;
     }
 
+    public function epreuveAdd(Request $request, Response $response): Response
+    {
+        $this->eprRepo->add($request->request);
+        $contentPage = $this->twig->twig->render('epreuveAdd.html.twig');
+        $response = $response->setContent($contentPage);
+        return $response;
+    }
+
 }

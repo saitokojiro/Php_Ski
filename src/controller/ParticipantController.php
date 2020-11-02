@@ -41,7 +41,7 @@ class ParticipantController extends DatabaseModel
 
     public function participantView(Request $request, Response $response): Response
     {
-       // $request = Request::createFromGlobals();
+        // $request = Request::createFromGlobals();
         $url = explode('=', $request->getPathInfo());
         $contentPage = $this->twig->twig->render('participantId.html.twig', ['pList' => $this->pList->find($url[1])]);
         $response = $response->setContent($contentPage);

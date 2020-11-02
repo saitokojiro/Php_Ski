@@ -31,24 +31,25 @@ class ParticipantsRepository extends model\DatabaseModel
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
     public static function add($content)
     {
-        if(!$content ==  null)
-        {
+        if (!$content == null) {
             dump($content);
-            $query= "insert into participants(nom, prenom,date_de_naissance,email,categorie, profil,photo) value (?,?,?,?,?,?,?)";
+            $query = "insert into participants(nom, prenom,date_de_naissance,email,categorie, profil,photo) value (?,?,?,?,?,?,?)";
             $stmt = self::$pdo->prepare($query);
-            $stmt->execute(array(
-                $content->get('nom'),
-                $content->get('prenom'),
-                $content->get('birth'),
-                $content->get('email'),
-                $content->get('categorie'),
-                $content->get('profil'),
-                $content->get('img'),
-            ));
+            $stmt->execute(
+                array(
+                    $content->get('nom'),
+                    $content->get('prenom'),
+                    $content->get('birth'),
+                    $content->get('email'),
+                    $content->get('categorie'),
+                    $content->get('profil'),
+                    $content->get('img'),
+                )
+            );
             $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
-
     }
 }

@@ -38,4 +38,24 @@ class EpreuveRepository extends model\DatabaseModel
         $stmt->execute(array($id));
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function add($content)
+    {
+        if (!$content == null) {
+            dump($content);
+            $query = "insert into epreuves(nom, categorie, profil, lieu, lifeDate, status) value (?,?,?,?,?,?)";
+            $stmt = self::$pdo->prepare($query);
+            $stmt->execute(
+                array(
+                    $content->get('nom'),
+                    $content->get('categorie'),
+                    $content->get('profil'),
+                    $content->get('Lieu'),
+                    $content->get('lifeDate'),
+                    $content->get('status'),
+                )
+            );
+            $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+    }
 }

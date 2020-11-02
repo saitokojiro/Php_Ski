@@ -29,13 +29,13 @@ class ResultatController extends DatabaseModel
     {
         $test = $this->uploaded->csvImportAnotherPage($request);
         $url = explode('=', $request->getPathInfo());
-        $this->resRepo->addParticipantsResult($test , $url[1]);
+        $this->resRepo->addParticipantsResult($test, $url[1]);
         $contentPage = $this->twig->twig->render('resultatList.html.twig', ['pList' => $test]);
         $response->setContent($contentPage);
         return $response;
     }
+
     public function ParticipantResult()
     {
-
     }
 }
